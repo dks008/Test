@@ -1,0 +1,8 @@
+E:/Qt/project/Test/Test/out/build/CMakeFiles/Test.dir
+E:/Qt/project/Test/Test/out/build/CMakeFiles/edit_cache.dir
+E:/Qt/project/Test/Test/out/build/CMakeFiles/rebuild_cache.dir
+E:/Qt/project/Test/Test/out/build/CMakeFiles/list_install_components.dir
+E:/Qt/project/Test/Test/out/build/CMakeFiles/install.dir
+E:/Qt/project/Test/Test/out/build/CMakeFiles/install/local.dir
+E:/Qt/project/Test/Test/out/build/CMakeFiles/Test_autogen_timestamp_deps.dir
+E:/Qt/project/Test/Test/out/build/CMakeFiles/Test_autogen.dir

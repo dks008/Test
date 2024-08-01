@@ -1,0 +1,13 @@
+# ninja log v6
+3	526	7440135048421639	Test_autogen/timestamp	b6c89f471556e932
+3	526	7440135048421639	Test_autogen/mocs_compilation.cpp	b6c89f471556e932
+3	526	7440135048421639	E:/Qt/project/Test/Test/build/Desktop_Qt_6_5_3_MinGW_64_bit-Debug/Test_autogen/timestamp	b6c89f471556e932
+3	526	7440135048421639	E:/Qt/project/Test/Test/build/Desktop_Qt_6_5_3_MinGW_64_bit-Debug/Test_autogen/mocs_compilation.cpp	b6c89f471556e932
+532	2914	7440135049014178	CMakeFiles/Test.dir/main.cpp.obj	5e5d768c99349fc
+529	2989	7440135048984179	CMakeFiles/Test.dir/Test_autogen/mocs_compilation.cpp.obj	8fbb0401cb7b150d
+17	118	7440136027874413	Test_autogen/timestamp	b6c89f471556e932
+17	118	7440136027874413	Test_autogen/mocs_compilation.cpp	b6c89f471556e932
+17	118	7440136027874413	E:/Qt/project/Test/Test/build/Desktop_Qt_6_5_3_MinGW_64_bit-Debug/Test_autogen/timestamp	b6c89f471556e932
+17	118	7440136027874413	E:/Qt/project/Test/Test/build/Desktop_Qt_6_5_3_MinGW_64_bit-Debug/Test_autogen/mocs_compilation.cpp	b6c89f471556e932
+118	2383	7440136028887648	CMakeFiles/Test.dir/mainwindow.cpp.obj	572c3a807653a9f0
+2384	2613	7440136051543673	Test.exe	6bec831ff6e6d846

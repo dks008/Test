@@ -1,0 +1,9 @@
+# ninja log v5
+5	1107	7440314766233366	Test_autogen/timestamp	ba52099835304402
+5	1107	7440314766233366	Test_autogen/mocs_compilation.cpp	ba52099835304402
+5	1107	7440314766233366	E:/Qt/project/Test/Test/out/build/Test_autogen/timestamp	ba52099835304402
+5	1107	7440314766233366	E:/Qt/project/Test/Test/out/build/Test_autogen/mocs_compilation.cpp	ba52099835304402
+1110	2929	7440314784788226	CMakeFiles/Test.dir/main.cpp.obj	71b507fd32a4384b
+1107	2933	7440314784808229	CMakeFiles/Test.dir/Test_autogen/mocs_compilation.cpp.obj	75696aee3db66e53
+1113	3005	7440314785542274	CMakeFiles/Test.dir/mainwindow.cpp.obj	785c289bb143a4ee
+3006	3299	7440314788318705	Test.exe	c4a7507b9647cf6a
