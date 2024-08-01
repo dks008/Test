@@ -19,5 +19,7 @@ public:
 
 private:
     Ui::MainScene *ui;
+
+    void paintEvent(QPaintEvent*event);
 };
 #endif // MAINSCENE_H
