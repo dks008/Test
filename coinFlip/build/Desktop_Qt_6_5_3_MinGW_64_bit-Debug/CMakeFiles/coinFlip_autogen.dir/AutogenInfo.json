@@ -254,6 +254,12 @@
 	"HEADERS" : 
 	[
 		[
+			"E:/Qt/project/coinFlip/chooselevelscene.h",
+			"MU",
+			"EWIEGA46WW/moc_chooselevelscene.cpp",
+			null
+		],
+		[
 			"E:/Qt/project/coinFlip/mainscene.h",
 			"MU",
 			"EWIEGA46WW/moc_mainscene.cpp",
@@ -336,6 +342,7 @@
 	"SETTINGS_FILE" : "E:/Qt/project/coinFlip/build/Desktop_Qt_6_5_3_MinGW_64_bit-Debug/CMakeFiles/coinFlip_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[ "E:/Qt/project/coinFlip/chooselevelscene.cpp", "MU", null ],
 		[ "E:/Qt/project/coinFlip/main.cpp", "MU", null ],
 		[ "E:/Qt/project/coinFlip/mainscene.cpp", "MU", null ],
 		[ "E:/Qt/project/coinFlip/mypushbutton.cpp", "MU", null ]

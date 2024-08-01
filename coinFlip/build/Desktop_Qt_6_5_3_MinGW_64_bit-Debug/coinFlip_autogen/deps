@@ -513,6 +513,8 @@ coinFlip_autogen/timestamp: \
 	E:/Qt/project/coinFlip/build/Desktop_Qt_6_5_3_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CMakeRCCompiler.cmake \
 	E:/Qt/project/coinFlip/build/Desktop_Qt_6_5_3_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CMakeSystem.cmake \
 	E:/Qt/project/coinFlip/build/Desktop_Qt_6_5_3_MinGW_64_bit-Debug/coinFlip_autogen/moc_predefs.h \
+	E:/Qt/project/coinFlip/chooselevelscene.cpp \
+	E:/Qt/project/coinFlip/chooselevelscene.h \
 	E:/Qt/project/coinFlip/main.cpp \
 	E:/Qt/project/coinFlip/mainscene.cpp \
 	E:/Qt/project/coinFlip/mainscene.h \

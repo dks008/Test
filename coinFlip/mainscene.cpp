@@ -21,17 +21,25 @@ MainScene::~MainScene()
 
 void MainScene::paintEvent(QPaintEvent*)
 {
-    QPainter painter(this);//指定绘图设备
+    //指定绘图设备
+    QPainter painter(this);
     QPixmap pix;
-    pix.load(":/res/PlayLevelSceneBg.png");//加载图片
-    painter.drawPixmap(0,0,this -> width(),this -> height(),pix);//绘制背景
+    //加载图片
+    pix.load(":/res/PlayLevelSceneBg.png");
+    //绘制背景
+    painter.drawPixmap(0,0,this -> width(),this -> height(),pix);
 
-    pix.load(":/res/Title.png");//加载标题图片
-    pix = pix.scaled(pix.width()*0.5,pix.height()*0.5);//缩放
-    painter.drawPixmap(10,30,pix.width(),pix.height(),pix);//绘制背景
+    //加载标题图片
+    pix.load(":/res/Title.png");
+    //缩放
+    pix = pix.scaled(pix.width()*0.5,pix.height()*0.5);
+    //绘制背景
+    painter.drawPixmap(10,30,pix.width(),pix.height(),pix);
 
+    //为按钮加载图片
     MyPushButton * startBtn = new MyPushButton(":/res/MenuSceneStartButton.png");
     startBtn->setParent(this);
+    //放置在合适位置
     startBtn->move(this->width()*0.5-startBtn->width()*0.5,this->height()*0.7);
     startBtn->show();
     connect(startBtn,&MyPushButton::clicked,[=](){
