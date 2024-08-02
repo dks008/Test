@@ -1,7 +1,9 @@
 #include "mainscene.h"
 #include "./ui_mainscene.h"
 #include "mypushbutton.h"
+#include "chooselevelscene.h"
 #include <QPainter>
+#include <QTimer>
 
 MainScene::MainScene(QWidget *parent)
     : QMainWindow(parent)
@@ -36,15 +38,23 @@ void MainScene::paintEvent(QPaintEvent*)
     //绘制背景
     painter.drawPixmap(10,30,pix.width(),pix.height(),pix);
 
-    //为按钮加载图片
+    //开始按钮
     MyPushButton * startBtn = new MyPushButton(":/res/MenuSceneStartButton.png");
     startBtn->setParent(this);
     //放置在合适位置
     startBtn->move(this->width()*0.5-startBtn->width()*0.5,this->height()*0.7);
     startBtn->show();
+
+    //选择关卡页面
+    ChooseLevelScene *chooseScene = new ChooseLevelScene;
+
     connect(startBtn,&MyPushButton::clicked,[=](){
         startBtn->zoom1(); //向下跳跃
         startBtn->zoom2(); //向上跳跃
-
+        QTimer::singleShot(500, this,[=](){
+            this->hide();
+            chooseScene->show();
+        });
     });
+
 }
