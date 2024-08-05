@@ -42,7 +42,8 @@ void MyPushButton::zoom1()
     animation1->setStartValue(QRect(this->x(),this->y(),this->width(),this->height()));
     //创建结束位置
     animation1->setEndValue(QRect(this->x(),this->y()+10,this->width(),this->height()));
-    //设置缓和曲线，QEasingCurve::OutBounce 为弹跳效果    animation1->setEasingCurve(QEasingCurve::OutBounce);
+    //设置缓和曲线，QEasingCurve::OutBounce 为弹跳效果
+    animation1->setEasingCurve(QEasingCurve::OutBounce);
     //开始执行动画
     animation1->start();
 }

@@ -520,6 +520,8 @@ coinFlip_autogen/timestamp: \
 	E:/Qt/project/coinFlip/mainscene.h \
 	E:/Qt/project/coinFlip/mypushbutton.cpp \
 	E:/Qt/project/coinFlip/mypushbutton.h \
+	E:/Qt/project/coinFlip/playscene.cpp \
+	E:/Qt/project/coinFlip/playscene.h \
 	E:/Qt/project/coinFlip/res.qrc \
 	E:/Qt/project/coinFlip/mainscene.ui \
 	E:/Qt/Tools/CMake_64/bin/cmake.exe

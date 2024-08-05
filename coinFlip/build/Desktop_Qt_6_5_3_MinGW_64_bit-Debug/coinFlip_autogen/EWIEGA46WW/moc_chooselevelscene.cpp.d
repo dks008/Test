@@ -338,4 +338,5 @@ E:/Qt/project/coinFlip/build/Desktop_Qt_6_5_3_MinGW_64_bit-Debug/coinFlip_autoge
   E:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/sys/types.h \
   E:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/time.h \
   E:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/vadefs.h \
-  E:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h
+  E:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h \
+  E:/Qt/project/coinFlip/playscene.h

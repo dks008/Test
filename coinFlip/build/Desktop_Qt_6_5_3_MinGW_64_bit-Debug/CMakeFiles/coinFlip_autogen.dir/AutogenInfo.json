@@ -270,6 +270,12 @@
 			"MU",
 			"EWIEGA46WW/moc_mypushbutton.cpp",
 			null
+		],
+		[
+			"E:/Qt/project/coinFlip/playscene.h",
+			"MU",
+			"EWIEGA46WW/moc_playscene.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -345,7 +351,8 @@
 		[ "E:/Qt/project/coinFlip/chooselevelscene.cpp", "MU", null ],
 		[ "E:/Qt/project/coinFlip/main.cpp", "MU", null ],
 		[ "E:/Qt/project/coinFlip/mainscene.cpp", "MU", null ],
-		[ "E:/Qt/project/coinFlip/mypushbutton.cpp", "MU", null ]
+		[ "E:/Qt/project/coinFlip/mypushbutton.cpp", "MU", null ],
+		[ "E:/Qt/project/coinFlip/playscene.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],
