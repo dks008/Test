@@ -3,6 +3,8 @@
 #include <QMenuBar>
 #include <QPainter>
 #include <QLabel>
+#include <QGridLayout>
+#include <QTimer>
 
 ChooseLevelScene::ChooseLevelScene(QWidget *parent)
     : QMainWindow{parent}
@@ -24,35 +26,22 @@ ChooseLevelScene::ChooseLevelScene(QWidget *parent)
     //点击退出 退出游戏
     connect(quitAction,&QAction::triggered,[=](){this->close();});
 
+    //创建网格，放置关卡按钮
+    QGridLayout *chooseLevel = new QGridLayout();
+    chooseLevel->setContentsMargins(0,120,0,50);
+    QWidget *choose = new QWidget(this);
+    //设置中心窗口，居中分布
+    this->setCentralWidget(choose);
+    choose->setLayout(chooseLevel);
     //创建关卡按钮
-    for(int i = 0 ; i < 20;i++)
-    {
-        MyPushButton * menuBtn = new MyPushButton(":/res/LevelIcon.png");
-        menuBtn->setParent(this);
-        menuBtn->move(25 + (i%4)*70 , 130+ (i/4)*70);
-        menuBtn->show();
+    createLevelButtons(chooseLevel);
 
-        //按钮上显示的文字
-        QLabel * label = new QLabel;
-        label->setParent(this);
-        label->setFixedSize(menuBtn->width(),menuBtn->height());
-        label->setText(QString::number(i+1));
-        label->setAlignment(Qt::AlignHCenter | Qt::AlignVCenter); //设置居中
-        label->move(25 + (i%4)*70 , 130+ (i/4)*70);
-        label->setAttribute(Qt::WA_TransparentForMouseEvents,true);  //鼠标事件穿透
-        label->show();
-
-        //监听选择关卡按钮的信号槽
-        connect(menuBtn,&MyPushButton::clicked,[=](){
-            // qDebug() << "select: " << i;
-            if(pScene == NULL)  //游戏场景最好不用复用，直接移除掉创建新的场景
-            {
-                this->hide();
-                pScene = new PlayScene(i+1); //将选择的关卡号 传入给PlayerScene
-                pScene->show();
-            }
-        });
-    }
+    //返回按钮
+    MyPushButton * closeBtn = new MyPushButton(":/res/BackButton.png",":/res/BackButtonSelected.png");
+    closeBtn->setParent(this);
+    closeBtn->move(this->width()-closeBtn->width(),this->height()-closeBtn->height());
+    closeBtn->show();
+    connect(closeBtn,&MyPushButton::clicked,this,&ChooseLevelScene::backToMain);
 }
 
 void ChooseLevelScene::paintEvent(QPaintEvent *)
@@ -65,10 +54,37 @@ void ChooseLevelScene::paintEvent(QPaintEvent *)
     //加载标题
     pix.load(":/res/Title.png");
     painter.drawPixmap( (this->width() - pix.width())*0.5,30,pix.width(),pix.height(),pix);
+}
 
-    //返回按钮
-    MyPushButton * closeBtn = new MyPushButton(":/res/BackButton.png",":/res/BackButtonSelected.png");
-    closeBtn->setParent(this);
-    closeBtn->move(this->width()-closeBtn->width(),this->height()-closeBtn->height());
-    closeBtn->show();
+void ChooseLevelScene::createLevelButtons(QGridLayout *layout) {
+    for (int i = 0; i < 20; i++) {
+        MyPushButton *menuBtn = new MyPushButton(":/res/LevelIcon.png");
+        menuBtn->setParent(this); // 设置父级为当前窗口
+        layout->addWidget(menuBtn, i / 4, i % 4);
+
+        // 按钮上显示的文字
+        QLabel *label = new QLabel;
+        label->setParent(this);
+        label->setFixedSize(menuBtn->width(), menuBtn->height());
+        label->setText(QString::number(i + 1));
+        label->setAlignment(Qt::AlignHCenter | Qt::AlignVCenter); // 设置居中
+        layout->addWidget(label, i / 4, i % 4);
+        label->setAttribute(Qt::WA_TransparentForMouseEvents, true); // 鼠标事件穿透
+
+        // 监听选择关卡按钮的信号槽
+        connect(menuBtn, &MyPushButton::clicked, [=]() {
+            if (pScene == nullptr) { // 游戏场景最好不用复用，直接移除掉创建新的场景
+                this->hide();
+                pScene = new PlayScene(i + 1); // 将选择的关卡号传入给PlayerScene
+                pScene->show();
+                connect(pScene,&PlayScene::backToChooseLevel,this,[=](){
+                    QTimer::singleShot(200,this,[=](){
+                        this->show();
+                        delete pScene;
+                        pScene = NULL;
+                    });
+                });
+            }
+        });
+    }
 }

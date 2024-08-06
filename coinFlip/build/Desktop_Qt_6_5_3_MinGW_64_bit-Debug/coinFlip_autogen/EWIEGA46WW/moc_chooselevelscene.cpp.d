@@ -133,7 +133,12 @@ E:/Qt/project/coinFlip/build/Desktop_Qt_6_5_3_MinGW_64_bit-Debug/coinFlip_autoge
   E:/Qt/6.5.3/mingw_64/include/QtGui/qtransform.h \
   E:/Qt/6.5.3/mingw_64/include/QtGui/qwindowdefs.h \
   E:/Qt/6.5.3/mingw_64/include/QtGui/qwindowdefs_win.h \
+  E:/Qt/6.5.3/mingw_64/include/QtWidgets/QGridLayout \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/QMainWindow \
+  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qboxlayout.h \
+  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgridlayout.h \
+  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qlayout.h \
+  E:/Qt/6.5.3/mingw_64/include/QtWidgets/qlayoutitem.h \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/qmainwindow.h \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/qsizepolicy.h \
   E:/Qt/6.5.3/mingw_64/include/QtWidgets/qtabwidget.h \

@@ -1168,7 +1168,12 @@ E:/Qt/project/coinFlip/chooselevelscene.h
  mdp:E:/Qt/6.5.3/mingw_64/include/QtGui/qtransform.h
  mdp:E:/Qt/6.5.3/mingw_64/include/QtGui/qwindowdefs.h
  mdp:E:/Qt/6.5.3/mingw_64/include/QtGui/qwindowdefs_win.h
+ mdp:E:/Qt/6.5.3/mingw_64/include/QtWidgets/QGridLayout
  mdp:E:/Qt/6.5.3/mingw_64/include/QtWidgets/QMainWindow
+ mdp:E:/Qt/6.5.3/mingw_64/include/QtWidgets/qboxlayout.h
+ mdp:E:/Qt/6.5.3/mingw_64/include/QtWidgets/qgridlayout.h
+ mdp:E:/Qt/6.5.3/mingw_64/include/QtWidgets/qlayout.h
+ mdp:E:/Qt/6.5.3/mingw_64/include/QtWidgets/qlayoutitem.h
  mdp:E:/Qt/6.5.3/mingw_64/include/QtWidgets/qmainwindow.h
  mdp:E:/Qt/6.5.3/mingw_64/include/QtWidgets/qsizepolicy.h
  mdp:E:/Qt/6.5.3/mingw_64/include/QtWidgets/qtabwidget.h

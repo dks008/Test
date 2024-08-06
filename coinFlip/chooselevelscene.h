@@ -3,6 +3,7 @@
 
 #include "playscene.h"
 #include <QMainWindow>
+#include <QGridLayout>
 
 class ChooseLevelScene : public QMainWindow
 {
@@ -12,7 +13,11 @@ public:
     void paintEvent(QPaintEvent *event);
     PlayScene *pScene = NULL;
 
+private:
+    void createLevelButtons(QGridLayout *layout);
+
 signals:
+    void backToMain();
 };
 
 #endif // CHOOSELEVELSCENE_H

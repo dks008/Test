@@ -4,6 +4,7 @@
 #include "chooselevelscene.h"
 #include <QPainter>
 #include <QTimer>
+#include <QRandomGenerator>
 
 MainScene::MainScene(QWidget *parent)
     : QMainWindow(parent)
@@ -12,7 +13,7 @@ MainScene::MainScene(QWidget *parent)
     ui->setupUi(this);
     this -> setFixedSize(320,588);//设置窗体大小
     this -> setWindowIcon(QPixmap(":/res/Coin0001.png"));//设置应用图片标识
-    this -> setWindowTitle("翻翻翻翻金币");
+    this -> setWindowTitle("翻翻翻翻金币！");
     connect(ui -> actionQuit,&QAction::triggered,[=](){this -> close();});
 
     //开始按钮
@@ -25,13 +26,31 @@ MainScene::MainScene(QWidget *parent)
     //选择关卡页面
     ChooseLevelScene *chooseScene = new ChooseLevelScene;
 
+    //开始，进入关卡选择界面
     connect(startBtn,&MyPushButton::clicked,[=](){
         startBtn->zoom1(); //向下跳跃
         startBtn->zoom2(); //向上跳跃
-        QTimer::singleShot(500, this,[=](){
+        QTimer::singleShot(300, this,[=](){
             this->hide();
             chooseScene->show();
         });
+    });
+
+    //返回开始界面
+    connect(chooseScene,&ChooseLevelScene::backToMain,this,[=](){
+        QTimer::singleShot(200,this,[=](){
+            this->show();
+            chooseScene->hide();
+        });
+    });
+
+    //返回按钮
+    MyPushButton * closeBtn = new MyPushButton(":/res/BackButton.png",":/res/BackButtonSelected.png");
+    closeBtn->setParent(this);
+    closeBtn->move(this->width()-closeBtn->width(),this->height()-closeBtn->height());
+    closeBtn->show();
+    connect(closeBtn,&MyPushButton::clicked,this,[=](){
+        closeBtn->move(QRandomGenerator::global()->bounded(10, 240),QRandomGenerator::global()->bounded(15, 570));
     });
 }
 
@@ -56,5 +75,4 @@ void MainScene::paintEvent(QPaintEvent*)
     pix = pix.scaled(pix.width()*0.5,pix.height()*0.5);
     //绘制背景
     painter.drawPixmap(10,30,pix.width(),pix.height(),pix);
-
 }
