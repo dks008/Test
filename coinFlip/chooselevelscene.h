@@ -10,11 +10,12 @@ class ChooseLevelScene : public QMainWindow
     Q_OBJECT
 public:
     explicit ChooseLevelScene(QWidget *parent = nullptr);
-    void paintEvent(QPaintEvent *event);
     PlayScene *pScene = NULL;
 
 private:
+    void paintEvent(QPaintEvent *event);
     void createLevelButtons(QGridLayout *layout);
+    void backButton();
 
 signals:
     void backToMain();

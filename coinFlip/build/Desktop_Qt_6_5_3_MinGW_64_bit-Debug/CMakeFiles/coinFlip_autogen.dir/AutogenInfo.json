@@ -260,6 +260,18 @@
 			null
 		],
 		[
+			"E:/Qt/project/coinFlip/coin.h",
+			"MU",
+			"EWIEGA46WW/moc_coin.cpp",
+			null
+		],
+		[
+			"E:/Qt/project/coinFlip/dataconfig.h",
+			"MU",
+			"EWIEGA46WW/moc_dataconfig.cpp",
+			null
+		],
+		[
 			"E:/Qt/project/coinFlip/mainscene.h",
 			"MU",
 			"EWIEGA46WW/moc_mainscene.cpp",
@@ -349,6 +361,8 @@
 	"SOURCES" : 
 	[
 		[ "E:/Qt/project/coinFlip/chooselevelscene.cpp", "MU", null ],
+		[ "E:/Qt/project/coinFlip/coin.cpp", "MU", null ],
+		[ "E:/Qt/project/coinFlip/dataconfig.cpp", "MU", null ],
 		[ "E:/Qt/project/coinFlip/main.cpp", "MU", null ],
 		[ "E:/Qt/project/coinFlip/mainscene.cpp", "MU", null ],
 		[ "E:/Qt/project/coinFlip/mypushbutton.cpp", "MU", null ],

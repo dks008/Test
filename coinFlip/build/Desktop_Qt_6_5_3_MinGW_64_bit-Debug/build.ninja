@@ -97,6 +97,22 @@ build CMakeFiles/coinFlip.dir/playscene.cpp.obj: CXX_COMPILER__coinFlip_unscanne
   OBJECT_DIR = CMakeFiles\coinFlip.dir
   OBJECT_FILE_DIR = CMakeFiles\coinFlip.dir
 
+build CMakeFiles/coinFlip.dir/coin.cpp.obj: CXX_COMPILER__coinFlip_unscanned_Debug E$:/Qt/project/coinFlip/coin.cpp || cmake_object_order_depends_target_coinFlip
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\coinFlip.dir\coin.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -IE:/Qt/project/coinFlip/build/Desktop_Qt_6_5_3_MinGW_64_bit-Debug/coinFlip_autogen/include -isystem E:/Qt/6.5.3/mingw_64/include/QtCore -isystem E:/Qt/6.5.3/mingw_64/include -isystem E:/Qt/6.5.3/mingw_64/mkspecs/win32-g++ -isystem E:/Qt/6.5.3/mingw_64/include/QtWidgets -isystem E:/Qt/6.5.3/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\coinFlip.dir
+  OBJECT_FILE_DIR = CMakeFiles\coinFlip.dir
+
+build CMakeFiles/coinFlip.dir/dataconfig.cpp.obj: CXX_COMPILER__coinFlip_unscanned_Debug E$:/Qt/project/coinFlip/dataconfig.cpp || cmake_object_order_depends_target_coinFlip
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\coinFlip.dir\dataconfig.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -IE:/Qt/project/coinFlip/build/Desktop_Qt_6_5_3_MinGW_64_bit-Debug/coinFlip_autogen/include -isystem E:/Qt/6.5.3/mingw_64/include/QtCore -isystem E:/Qt/6.5.3/mingw_64/include -isystem E:/Qt/6.5.3/mingw_64/mkspecs/win32-g++ -isystem E:/Qt/6.5.3/mingw_64/include/QtWidgets -isystem E:/Qt/6.5.3/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\coinFlip.dir
+  OBJECT_FILE_DIR = CMakeFiles\coinFlip.dir
+
 build CMakeFiles/coinFlip.dir/coinFlip_autogen/EWIEGA46WW/qrc_res.cpp.obj: CXX_COMPILER__coinFlip_unscanned_Debug E$:/Qt/project/coinFlip/build/Desktop_Qt_6_5_3_MinGW_64_bit-Debug/coinFlip_autogen/EWIEGA46WW/qrc_res.cpp || cmake_object_order_depends_target_coinFlip
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\coinFlip.dir\coinFlip_autogen\EWIEGA46WW\qrc_res.cpp.obj.d
@@ -113,7 +129,7 @@ build CMakeFiles/coinFlip.dir/coinFlip_autogen/EWIEGA46WW/qrc_res.cpp.obj: CXX_C
 #############################################
 # Link the executable coinFlip.exe
 
-build coinFlip.exe: CXX_EXECUTABLE_LINKER__coinFlip_Debug CMakeFiles/coinFlip.dir/coinFlip_autogen/mocs_compilation.cpp.obj CMakeFiles/coinFlip.dir/main.cpp.obj CMakeFiles/coinFlip.dir/mainscene.cpp.obj CMakeFiles/coinFlip.dir/mypushbutton.cpp.obj CMakeFiles/coinFlip.dir/chooselevelscene.cpp.obj CMakeFiles/coinFlip.dir/playscene.cpp.obj CMakeFiles/coinFlip.dir/coinFlip_autogen/EWIEGA46WW/qrc_res.cpp.obj | E$:/Qt/6.5.3/mingw_64/lib/libQt6Widgets.a E$:/Qt/6.5.3/mingw_64/lib/libQt6Gui.a E$:/Qt/6.5.3/mingw_64/lib/libQt6Core.a E$:/Qt/6.5.3/mingw_64/lib/libQt6EntryPoint.a || coinFlip_autogen coinFlip_autogen_timestamp_deps
+build coinFlip.exe: CXX_EXECUTABLE_LINKER__coinFlip_Debug CMakeFiles/coinFlip.dir/coinFlip_autogen/mocs_compilation.cpp.obj CMakeFiles/coinFlip.dir/main.cpp.obj CMakeFiles/coinFlip.dir/mainscene.cpp.obj CMakeFiles/coinFlip.dir/mypushbutton.cpp.obj CMakeFiles/coinFlip.dir/chooselevelscene.cpp.obj CMakeFiles/coinFlip.dir/playscene.cpp.obj CMakeFiles/coinFlip.dir/coin.cpp.obj CMakeFiles/coinFlip.dir/dataconfig.cpp.obj CMakeFiles/coinFlip.dir/coinFlip_autogen/EWIEGA46WW/qrc_res.cpp.obj | E$:/Qt/6.5.3/mingw_64/lib/libQt6Widgets.a E$:/Qt/6.5.3/mingw_64/lib/libQt6Gui.a E$:/Qt/6.5.3/mingw_64/lib/libQt6Core.a E$:/Qt/6.5.3/mingw_64/lib/libQt6EntryPoint.a || coinFlip_autogen coinFlip_autogen_timestamp_deps
   FLAGS = -DQT_QML_DEBUG -g
   LINK_FLAGS = -mwindows
   LINK_LIBRARIES = E:/Qt/6.5.3/mingw_64/lib/libQt6Widgets.a  E:/Qt/6.5.3/mingw_64/lib/libQt6Gui.a  E:/Qt/6.5.3/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -lmingw32  E:/Qt/6.5.3/mingw_64/lib/libQt6EntryPoint.a  -lshell32  -ld3d11  -ldxgi  -ldxguid  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32

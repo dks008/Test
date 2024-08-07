@@ -2,14 +2,20 @@
 #define PLAYSCENE_H
 
 #include <QMainWindow>
+#include <QGridLayout>
 
 class PlayScene : public QMainWindow
 {
     Q_OBJECT
 public:
     explicit PlayScene(int index);
-    void paintEvent(QPaintEvent *event);
     int levelIndex;
+    int gameArray[4][4];
+
+private:
+    void paintEvent(QPaintEvent *event);
+    void playBoard();
+    void backButton();
 
 signals:
     void backToChooseLevel();

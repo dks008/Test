@@ -1,4 +1,7 @@
 coinFlip_autogen/timestamp: \
+	E:/Qt/6.5.3/mingw_64/include/QtCore/QMap \
+	E:/Qt/6.5.3/mingw_64/include/QtCore/QObject \
+	E:/Qt/6.5.3/mingw_64/include/QtCore/QVector \
 	E:/Qt/6.5.3/mingw_64/include/QtCore/q20memory.h \
 	E:/Qt/6.5.3/mingw_64/include/QtCore/q20type_traits.h \
 	E:/Qt/6.5.3/mingw_64/include/QtCore/qalgorithms.h \
@@ -105,6 +108,7 @@ coinFlip_autogen/timestamp: \
 	E:/Qt/6.5.3/mingw_64/include/QtCore/qutf8stringview.h \
 	E:/Qt/6.5.3/mingw_64/include/QtCore/qvariant.h \
 	E:/Qt/6.5.3/mingw_64/include/QtCore/qvarlengtharray.h \
+	E:/Qt/6.5.3/mingw_64/include/QtCore/qvector.h \
 	E:/Qt/6.5.3/mingw_64/include/QtCore/qversiontagging.h \
 	E:/Qt/6.5.3/mingw_64/include/QtCore/qxptype_traits.h \
 	E:/Qt/6.5.3/mingw_64/include/QtGui/qaction.h \
@@ -520,6 +524,10 @@ coinFlip_autogen/timestamp: \
 	E:/Qt/project/coinFlip/build/Desktop_Qt_6_5_3_MinGW_64_bit-Debug/coinFlip_autogen/moc_predefs.h \
 	E:/Qt/project/coinFlip/chooselevelscene.cpp \
 	E:/Qt/project/coinFlip/chooselevelscene.h \
+	E:/Qt/project/coinFlip/coin.cpp \
+	E:/Qt/project/coinFlip/coin.h \
+	E:/Qt/project/coinFlip/dataconfig.cpp \
+	E:/Qt/project/coinFlip/dataconfig.h \
 	E:/Qt/project/coinFlip/main.cpp \
 	E:/Qt/project/coinFlip/mainscene.cpp \
 	E:/Qt/project/coinFlip/mainscene.h \

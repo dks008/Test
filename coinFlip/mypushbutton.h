@@ -9,12 +9,12 @@ class MyPushButton : public QPushButton
 public:
     explicit MyPushButton(QWidget *parent = nullptr);
     MyPushButton(QString normalImg, QString pressImg = "", QWidget *parent = nullptr);
+    void zoom1();
+    void zoom2();
 
     QString normalImgPath;  // 默认显示图片路径
     QString pressedImgPath; // 按下后显示图片路径
 
-    void zoom1();
-    void zoom2();
 signals:
 };
 

@@ -35,13 +35,8 @@ ChooseLevelScene::ChooseLevelScene(QWidget *parent)
     choose->setLayout(chooseLevel);
     //创建关卡按钮
     createLevelButtons(chooseLevel);
-
-    //返回按钮
-    MyPushButton * closeBtn = new MyPushButton(":/res/BackButton.png",":/res/BackButtonSelected.png");
-    closeBtn->setParent(this);
-    closeBtn->move(this->width()-closeBtn->width(),this->height()-closeBtn->height());
-    closeBtn->show();
-    connect(closeBtn,&MyPushButton::clicked,this,&ChooseLevelScene::backToMain);
+    //创建返回按钮
+    backButton();
 }
 
 void ChooseLevelScene::paintEvent(QPaintEvent *)
@@ -87,4 +82,13 @@ void ChooseLevelScene::createLevelButtons(QGridLayout *layout) {
             }
         });
     }
+}
+
+void ChooseLevelScene::backButton(){
+    //返回按钮
+    MyPushButton * closeBtn = new MyPushButton(":/res/BackButton.png",":/res/BackButtonSelected.png");
+    closeBtn->setParent(this);
+    closeBtn->move(this->width()-closeBtn->width(),this->height()-closeBtn->height());
+    closeBtn->show();
+    connect(closeBtn,&MyPushButton::clicked,this,&ChooseLevelScene::backToMain);
 }
