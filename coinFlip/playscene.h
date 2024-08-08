@@ -12,6 +12,7 @@ public:
     int levelIndex;
     int gameArray[4][4];
 
+
 private:
     void paintEvent(QPaintEvent *event);
     void playBoard();

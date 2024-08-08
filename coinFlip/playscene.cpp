@@ -6,6 +6,7 @@
 #include <QPainter>
 #include <QLabel>
 #include <QGridLayout>
+#include <QTimer>
 
 PlayScene::PlayScene(int index)
 {
@@ -29,7 +30,7 @@ PlayScene::PlayScene(int index)
     connect(quitAction,&QAction::triggered,[=](){this->close();});
     //创建返回按钮
     backButton();
-    //创建游戏背景
+    //创建游戏
     playBoard();
 
 }
@@ -103,6 +104,34 @@ void PlayScene::playBoard(){
             Coin->posY = j; //记录y坐标
             Coin->flag =gameArray[i][j]; //记录正反标志
 
+            connect(Coin,&coin::clicked,[=](){
+                //qDebug() << "点击的位置： x = " <<  coin->posX << " y = " << coin->posY ;
+                Coin->changeFlag();
+                gameArray[i][j] = gameArray[i][j] == 0 ? 1 : 0; //数组内部记录的标志同步修改
+
+                QTimer::singleShot(300, this,[=](){
+                    if(Coin->posX+1 <=3)
+                    {
+                        coinBtn[Coin->posX+1][Coin->posY]->changeFlag();
+                        gameArray[Coin->posX+1][Coin->posY] = gameArray[Coin->posX+1][Coin->posY]== 0 ? 1 : 0;
+                    }
+                    if(Coin->posX-1>=0)
+                    {
+                        coinBtn[Coin->posX-1][Coin->posY]->changeFlag();
+                        gameArray[Coin->posX-1][Coin->posY] = gameArray[Coin->posX-1][Coin->posY]== 0 ? 1 : 0;
+                    }
+                    if(Coin->posY+1<=3)
+                    {
+                        coinBtn[Coin->posX][Coin->posY+1]->changeFlag();
+                        gameArray[Coin->posX][Coin->posY+1] = gameArray[Coin->posX+1][Coin->posY]== 0 ? 1 : 0;
+                    }
+                    if(Coin->posY-1>=0)
+                    {
+                        coinBtn[Coin->posX][Coin->posY-1]->changeFlag();
+                        gameArray[Coin->posX][Coin->posY-1] = gameArray[Coin->posX+1][Coin->posY]== 0 ? 1 : 0;
+                    }
+                });
+            });
         }
     }
 }
