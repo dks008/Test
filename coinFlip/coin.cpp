@@ -76,9 +76,3 @@ void coin::flipAction(bool flag)
     this->setIcon(pixmap);
     this->setIconSize(QSize(pixmap.width(),pixmap.height()));
 }
-
-void coin::flip()
-{
-    int x = this->posX;
-    int y = this->posY;
-}

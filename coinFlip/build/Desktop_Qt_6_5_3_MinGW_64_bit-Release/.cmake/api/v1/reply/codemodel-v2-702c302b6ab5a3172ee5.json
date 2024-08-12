@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-f9a49d4e4c9c5ebcca52.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "coinFlip",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "coinFlip::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-coinFlip-Release-114331ac22e8469ae384.json",
+					"name" : "coinFlip",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "coinFlip_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-coinFlip_autogen-Release-a5743b9f3f1d9966d614.json",
+					"name" : "coinFlip_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "coinFlip_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-coinFlip_autogen_timestamp_deps-Release-e3dddeb3ae9bfa2d6b48.json",
+					"name" : "coinFlip_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "E:/Qt/project/coinFlip/build/Desktop_Qt_6_5_3_MinGW_64_bit-Release",
+		"source" : "E:/Qt/project/coinFlip"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

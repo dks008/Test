@@ -18,7 +18,6 @@ public:
     int max = 8; //最大图片
 
 private:
-    void flip();
     void flipAction(bool flag);
     bool isAnimation  = false; //做翻转动画的标志
 

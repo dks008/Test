@@ -103,13 +103,15 @@ void PlayScene::playBoard(){
             Coin->posX = i; //记录x坐标
             Coin->posY = j; //记录y坐标
             Coin->flag =gameArray[i][j]; //记录正反标志
+            coinBtn[i][j] = Coin;
 
             connect(Coin,&coin::clicked,[=](){
-                //qDebug() << "点击的位置： x = " <<  coin->posX << " y = " << coin->posY ;
                 Coin->changeFlag();
                 gameArray[i][j] = gameArray[i][j] == 0 ? 1 : 0; //数组内部记录的标志同步修改
 
-                QTimer::singleShot(300, this,[=](){
+                //翻转周围硬币
+                QTimer::singleShot(150, this,[=]()
+                {
                     if(Coin->posX+1 <=3)
                     {
                         coinBtn[Coin->posX+1][Coin->posY]->changeFlag();
@@ -131,6 +133,26 @@ void PlayScene::playBoard(){
                         gameArray[Coin->posX][Coin->posY-1] = gameArray[Coin->posX+1][Coin->posY]== 0 ? 1 : 0;
                     }
                 });
+
+                //判断游戏胜利条件
+                this->isWin = true;
+                for(int i = 0 ; i < 4;i++)
+                {
+                    for(int j = 0 ; j < 4; j++)
+                    {
+                        //qDebug() << coinBtn[i][j]->flag ;
+                        if( coinBtn[i][j]->flag == false)
+                        {
+                            this->isWin = false;
+                            break;
+                        }
+                    }
+                }
+
+                if(this->isWin)
+                {
+                    qDebug() << "胜利";
+                }
             });
         }
     }
