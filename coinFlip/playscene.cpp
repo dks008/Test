@@ -7,6 +7,7 @@
 #include <QLabel>
 #include <QGridLayout>
 #include <QTimer>
+#include <QDebug>
 
 PlayScene::PlayScene(int index)
 {
@@ -132,27 +133,37 @@ void PlayScene::playBoard(){
                         coinBtn[Coin->posX][Coin->posY-1]->changeFlag();
                         gameArray[Coin->posX][Coin->posY-1] = gameArray[Coin->posX+1][Coin->posY]== 0 ? 1 : 0;
                     }
-                });
 
-                //判断游戏胜利条件
-                this->isWin = true;
-                for(int i = 0 ; i < 4;i++)
-                {
-                    for(int j = 0 ; j < 4; j++)
+                    //判断游戏胜利条件
+                    this->isWin = true;
+                    for(int i = 0 ; i < 4;i++)
                     {
-                        //qDebug() << coinBtn[i][j]->flag ;
-                        if( coinBtn[i][j]->flag == false)
+                        for(int j = 0 ; j < 4; j++)
                         {
-                            this->isWin = false;
-                            break;
+                            //qDebug() << coinBtn[i][j]->flag ;
+                            if( coinBtn[i][j]->flag == false)
+                            {
+                                this->isWin = false;
+                                break;
+                            }
                         }
                     }
-                }
 
-                if(this->isWin)
-                {
-                    qDebug() << "胜利";
-                }
+                    if(this->isWin)
+                    {
+                        //qDebug() << "win!" ;
+                        QLabel *winLabel = new QLabel;
+                        QPixmap winPix;
+                        winPix.load(":/res/LevelCompletedDialogBg.png");
+                        winLabel->setParent(this);
+                        winLabel->setGeometry(30,30,this->width()-60,this->height()-60);
+                        winLabel->setPixmap(winPix);
+                        winLabel->setAlignment(Qt::AlignCenter);
+                        QTimer::singleShot(500,this,[=](){
+                            winLabel->show();
+                        });
+                    }
+                });
             });
         }
     }

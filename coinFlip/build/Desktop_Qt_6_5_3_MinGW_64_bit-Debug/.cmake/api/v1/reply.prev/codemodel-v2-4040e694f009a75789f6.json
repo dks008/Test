@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-d4068f16d72727065220.json",
+					"jsonFile" : "directory-.-Debug-f9a49d4e4c9c5ebcca52.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -44,7 +44,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "coinFlip::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-coinFlip-Debug-e2bbe4f9e9b733301d6d.json",
+					"jsonFile" : "target-coinFlip-Debug-b7745efbfa6361d44698.json",
 					"name" : "coinFlip",
 					"projectIndex" : 0
 				},

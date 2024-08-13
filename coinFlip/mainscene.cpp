@@ -2,8 +2,10 @@
 #include "./ui_mainscene.h"
 #include "mypushbutton.h"
 #include "chooselevelscene.h"
+#include <QUrl>
 #include <QPainter>
 #include <QTimer>
+#include <QSoundEffect>
 #include <QRandomGenerator>
 
 MainScene::MainScene(QWidget *parent)
@@ -23,11 +25,17 @@ MainScene::MainScene(QWidget *parent)
     startBtn->move(this->width()*0.5-startBtn->width()*0.5,this->height()*0.7);
     startBtn->show();
 
+    //设置音效
+    QSoundEffect *startSound= new QSoundEffect;
+    startSound->setSource(QUrl(":/res/TapButtonSound.wav"));
+    startSound->setVolume(1);
+
     //选择关卡页面
     ChooseLevelScene *chooseScene = new ChooseLevelScene;
 
     //开始，进入关卡选择界面
     connect(startBtn,&MyPushButton::clicked,[=](){
+        startSound->play();
         startBtn->zoom1(); //向下跳跃
         startBtn->zoom2(); //向上跳跃
         QTimer::singleShot(300, this,[=](){
