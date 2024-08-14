@@ -23,5 +23,6 @@
         <file>res/PlayLevelSceneBg.png</file>
         <file>res/TapButtonSound.wav</file>
         <file>res/Title.png</file>
+        <file>res/rules.png</file>
     </qresource>
 </RCC>

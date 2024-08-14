@@ -8,6 +8,7 @@
 #include <QGridLayout>
 #include <QTimer>
 #include <QDebug>
+#include <QTextEdit>
 
 PlayScene::PlayScene(int index)
 {
@@ -29,11 +30,15 @@ PlayScene::PlayScene(int index)
     QAction * quitAction = startMenu->addAction("退出");
     //点击退出 退出游戏
     connect(quitAction,&QAction::triggered,[=](){this->close();});
+
     //创建返回按钮
     backButton();
+
     //创建游戏
     playBoard();
 
+    //提示
+    gameTips();
 }
 
 void PlayScene::paintEvent(QPaintEvent *)
@@ -69,6 +74,37 @@ void PlayScene::backButton(){
     closeBtn->move(this->width()-closeBtn->width(),this->height()-closeBtn->height());
     closeBtn->show();
     connect(closeBtn,&MyPushButton::clicked,this,&PlayScene::backToChooseLevel);
+}
+
+void PlayScene::gameTips(){
+    //提示信息
+    QTextEdit *rulesEdit = new QTextEdit;
+    rulesEdit->setParent(this);
+    rulesEdit->setText(
+        "游戏规则：将所有硬币翻到正面（金色）即为游戏胜利"
+        "\n"
+        "\n"
+        "游戏玩法：点击硬币可以翻转本身及其周围四个方向（上、下、左、右）上的硬币");
+    rulesEdit->setGeometry(55,90,200,110);
+    rulesEdit->setStyleSheet(
+        "background-color: rgba(235, 175, 75, 80);"
+        "border:none");
+    rulesEdit->setReadOnly(true);
+    rulesEdit->hide();
+
+    //提示按钮
+    MyPushButton *rulesBtn = new MyPushButton(":/res/rules.png");
+    rulesBtn->setParent(this);
+    rulesBtn->setGeometry(280,40,25,37);
+    rulesBtn->show();
+    connect(rulesBtn,&MyPushButton::clicked,this,[=](){
+        if(rulesEdit->isVisible()){
+            rulesEdit->hide();
+        }
+        else {
+            rulesEdit->show();
+        }
+    });
 }
 
 void PlayScene::playBoard(){

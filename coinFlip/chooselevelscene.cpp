@@ -71,9 +71,11 @@ void ChooseLevelScene::createLevelButtons(QGridLayout *layout) {
             if (pScene == nullptr) { // 游戏场景最好不用复用，直接移除掉创建新的场景
                 this->hide();
                 pScene = new PlayScene(i + 1); // 将选择的关卡号传入给PlayerScene
+                pScene->setGeometry(this->geometry());
                 pScene->show();
                 connect(pScene,&PlayScene::backToChooseLevel,this,[=](){
                     QTimer::singleShot(200,this,[=](){
+                        this->setGeometry(pScene->geometry());
                         this->show();
                         delete pScene;
                         pScene = NULL;

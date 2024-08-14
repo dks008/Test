@@ -3,6 +3,7 @@
 #include "mypushbutton.h"
 #include "chooselevelscene.h"
 #include <QUrl>
+#include <QTextEdit>
 #include <QPainter>
 #include <QTimer>
 #include <QSoundEffect>
@@ -40,6 +41,7 @@ MainScene::MainScene(QWidget *parent)
         startBtn->zoom2(); //向上跳跃
         QTimer::singleShot(300, this,[=](){
             this->hide();
+            chooseScene->setGeometry(this->geometry());
             chooseScene->show();
         });
     });
@@ -47,6 +49,7 @@ MainScene::MainScene(QWidget *parent)
     //返回开始界面
     connect(chooseScene,&ChooseLevelScene::backToMain,this,[=](){
         QTimer::singleShot(200,this,[=](){
+            this->setGeometry(chooseScene->geometry());
             this->show();
             chooseScene->hide();
         });
@@ -59,6 +62,21 @@ MainScene::MainScene(QWidget *parent)
     closeBtn->show();
     connect(closeBtn,&MyPushButton::clicked,this,[=](){
         closeBtn->move(QRandomGenerator::global()->bounded(10, 240),QRandomGenerator::global()->bounded(15, 570));
+    });
+
+    //游戏提示
+    ui->rulesText->hide();
+    MyPushButton *rulesBtn = new MyPushButton(":/res/rules.png");
+    rulesBtn->setParent(this);
+    rulesBtn->setGeometry(280,40,25,37);
+    rulesBtn->show();
+    connect(rulesBtn,&MyPushButton::clicked,this,[=](){
+        if(ui->rulesText->isVisible()){
+            ui->rulesText->hide();
+        }
+        else {
+            ui->rulesText->show();
+        }
     });
 }
 
